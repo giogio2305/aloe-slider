@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js" integrity="sha512-nhY06wKras39lb9lRO76J4397CH1XpRSLfLJSftTeo3+q2vP7PaebILH9TqH+GRpnOhfAGjuYMVmVTOZJ+682w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+#galery {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    padding: 20px;
+    max-height: 550px;
+}
+
+#galery .gallery-thumbs {
+  width: calc(14% - 20px);
+  height: 550px;
+  margin-right: 12px;
+  
+}
+#galery .gallery-thumbs .swiper-wrapper{
+    display: flex !important;
+    flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+
+#galery .gallery-thumbs .swiper-slide {
+ position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  cursor: pointer;
+  width: 64px !important;
+  height: 70px !important;
+  margin: 4.5px 0;
+}
+#galery .gallery-thumbs .swiper-slide span.active{
+    display: none;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transition: display 0.8s ease-in-out;
+    border-radius: 4px;
+}
+#galery .gallery-thumbs .swiper-slide .tic{
+width: 64px !important;
+height: 64px !important;
+overflow: clip;
+border-radius: 8px;
+}
+
+
+#galery .gallery-top, .swiper{
+  width: 442px !important;
+  height: 442px !important;
+  border-radius: 16px;
+}
+#galery .swiper-container{
+    overflow: clip;
+}
+#galery .gallery-top .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: clip;
+}
+#galery .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>
+
+<section id="galery">
+    <div class="swiper-container gallery-thumbs">
+        <div class="swiper-wrapper">
+           <div class="swiper-slide item" data-slick-index="0"><div class="tic"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-2.jpg?v=1693255450&width=64" alt="slide1"></div><span class="active"></span></div>
+           <div class="swiper-slide item" data-slick-index="1"><div class="tic"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-4.jpg?v=1693255450&width=64" alt=""></div><span class="active"></span></div>
+           <div class="swiper-slide item" data-slick-index="2"><div class="tic"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-6.jpg?v=1693255450&width=64" alt=""></div><span class="active"></span></div>
+           <div class="swiper-slide item" data-slick-index="3"><div class="tic"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-5.jpg?v=1693255450&width=64" alt=""></div><span class="active"></span></div>
+           <div class="swiper-slide item" data-slick-index="4"><div class="tic"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-1.jpg?v=1693255450&width=64" alt=""></div><span class="active"></span></div>
+           <div class="swiper-slide item" data-slick-index="5"><div class="tic"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-3.jpg?v=1693255450&width=64" alt=""></div><span class="active"></span></div>
+           <div class="swiper-slide item" data-slick-index="6"><div class="tic"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-7.jpg?v=1693255439&width=64" alt=""></div><span class="active"></span></div>
+        </div>
+      </div>
+      <div class="swiper-container gallery-top">
+        <div class="swiper-wrapper">
+         <div class="swiper-slide" data-slick-index="0"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-2.jpg?v=1693255450&width=600" alt="slide1"></div>
+           <div class="swiper-slide" data-slick-index="1"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-4.jpg?v=1693255450&width=600" alt=""></div>
+           <div class="swiper-slide" data-slick-index="2"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-6.jpg?v=1693255450&width=600" alt=""></div>
+           <div class="swiper-slide" data-slick-index="3"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-5.jpg?v=1693255450&width=600" alt=""></div>
+           <div class="swiper-slide"data-slick-index="4"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-1.jpg?v=1693255450&width=600" alt=""></div>
+           <div class="swiper-slide" data-slick-index="5"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-3.jpg?v=1693255450&width=600" alt=""></div>
+           <div class="swiper-slide" data-slick-index="6"><img src="https://aloe-paris.co/cdn/shop/files/image-produit-aloe-paris-7.jpg?v=1693255439&width=600" alt=""></div>
+        </div>
+      </div>
+</section>
+
+  <script>
+    var galleryTop = new Swiper('.gallery-top', {
+	slidesPerView: 1,  
+      loop: true,
+      loopedSlides: 50,
+    });
+    // var galleryThumbs = new Swiper('.gallery-thumbs', {
+    //   direction: 'vertical',
+    //   slidesPerView: 7,
+    //   slideToClickedSlide: true,
+    //   spaceBetween: 10,
+    //   loopedSlides: 50,
+    //   loop: true,
+    // });
+    // galleryTop.controller.control = galleryThumbs;
+    // // galleryThumbs.controller.control = galleryTop;
+    $('.item').click(function () {
+        var goToThisIndex = $(this).data("slickIndex");
+        $("span.active").css("display", "none");
+        $(this).find("span").css("display", "block");;
+    	galleryTop.slideTo(goToThisIndex);
+    });
+  </script>
